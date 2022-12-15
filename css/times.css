@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-size: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background-color: #D9D9D9;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #252c32;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #4b5864;
+}
+
+.site{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-conteudo{
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    background-color: #9a9a9a;
+    padding: 15px 0 10px 0;
+}
+
+.logo{
+    position: absolute;
+    left: 45%;
+}
+
+.header img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header li{
+    display: flex;
+    margin-left: 100px;
+    padding: 5px 20px;
+    border: 1px solid #252c32;
+    border-radius: 5px;
+}
+
+.header li a{
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header li:hover{
+    font-weight: 700;
+    font-size: larger;
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    -webkit-box-shadow: 7px 15px 32px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 15px 32px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 15px 32px -4px rgba(0,0,0,0.75);    
+}
+
+.header li a:visited{
+    color: black;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+
+.footer-contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-decoration: overline;
+    background-color: #9a9a9a;
+}
+
+.desc{
+    display: grid;
+    place-items: center;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.footer-contents a{
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    padding-top: 5px;
+    margin-left: 30px;
+    left: auto;
+}
+
+.footer-contents a:visited{
+    color:black;
+}
+
+fieldset{
+    border:3px solid #0f1519; 
+    padding:2em; 
+    margin:1em;
+    border-radius: 5px;
+}
+
+.posicao{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Card */
+
+.descjogadores legend{
+    display: flex;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.desccomissao{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+.time{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-card{
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    height: 280px;
+    width: 230px;
+    margin: 5px;
+    perspective: 1000px;
+}
+
+.flip img{
+    height: 280px;
+    width: 230px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card .flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back-card{
+    transform: rotateY(180deg);
+}
+
+.pos{
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.container-card h1{
+    text-transform: uppercase;
+}
